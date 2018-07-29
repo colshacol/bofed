@@ -1,26 +1,13 @@
-import koa from 'koa'
-import http from 'http'
-import dayjs from 'dayjs'
+import createProxy from 'micro-proxy'
 
-const logger = (options) => {
-  return async (context, next) => {
-    console.log(`${dayjs().format('hh:MMa')} ∞ new request: ${context.path}`)
-    await next()
-  }
-}
+import './setup'
 
-export const listen = (server, port) => {
-  server.listen(port, (err) => {
-    if (err) throw new Error(err)
-    console.log(`Listening on port: https://localhost:${port}/`)
-  })
-}
+const proxy = createProxy([
+  { pathname: '/foo', method: ['GET'], dest: 'http://localhost:8001' },
+  { pathname: '/**', dest: 'http://localhost:8999' }
+])
 
-const main = async () => {
-  const app = new koa()
-  app.use(logger())
-
-  listen(http.createServer(app.callback()), 4001)
-}
-
-main()
+proxy.listen(8000, (err) => {
+  if (err) throw err
+  boxlog(`${time_stamp()}> Ready @ http://localhost:8000`)
+})

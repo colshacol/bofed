@@ -1,15 +1,47 @@
-## start
+# Client Scripts
 
-Starts webpack/webpack-serve in watch mode.
+## start-client
+
+Starts the client in dev mode with HMR.
 
 ```bash
 babel-node node_modules/.bin/webpack-serve --config ./webpack/client/webpack.dev.js
 ```
 
-## start-server
+## build-client
+
+Builds the client for production.
 
 ```bash
-babel-node node_modules/.bin/node-hot --config ./webpack/server/webpack.server.js
+babel-node node_modules/.bin/webpack --config ./webpack/client/webpack.prod.js
+```
+
+# Server Scripts
+
+## start-server
+
+Kills ports, builds the server(s), and starts the server(s).
+
+Run tasks `build-server` `kill-ports` before this.
+
+```bash
+yarn maid start-static-service & yarn maid start-foo-service & node server
+```
+
+## start-static-service
+
+Starts the static file server for `./public`.
+
+```bash
+serve -l 8999 ./public
+```
+
+## start-foo-service
+
+Starts the static file server for `./public`.
+
+```bash
+micro ./server/services/foo --port 8001
 ```
 
 ## build-server
@@ -18,16 +50,16 @@ babel-node node_modules/.bin/node-hot --config ./webpack/server/webpack.server.j
 babel ./src/server --out-dir ./server
 ```
 
-## build
-
-Builds the project for production.
-
-```bash
-babel-node node_modules/.bin/webpack --config ./webpack/client/webpack.dev.js
-```
-
 ## test
 
 ```bash
 jest
+```
+
+# Helper Scripts
+
+## kill-ports
+
+```bash
+kill-port 8000 8001 8002 8003 8004 8005 8999 8000
 ```
