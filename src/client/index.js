@@ -9,5 +9,5 @@ ReactDOM.render(
   <BrowserRouter>
     <AppRouter />
   </BrowserRouter>,
-  document.getElementById('mountPoint')
+  document.getElementById('root')
 )

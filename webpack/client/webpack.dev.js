@@ -1,27 +1,26 @@
 import webpack from 'webpack'
-import dateTime from 'dayjs'
+// import dateTime from 'dayjs'
 import path from 'path'
 
 import HtmlWebpackHarddiskPlugin from 'html-webpack-harddisk-plugin'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 import HtmlPlugin from 'html-webpack-plugin'
-import DotEnvPlugin from 'dotenv-webpack'
+// import DotEnvPlugin from 'dotenv-webpack'
 
-import { name } from '../package.json'
 import * as loaders from './loaders'
 
-const fromRoot = (_path) => path.resolve(__dirname, '../', _path)
+const fromRoot = (_path) => path.resolve(__dirname, '../../', _path)
 
 module.exports = (() => {
   return {
     mode: 'development',
     devtool: 'source-map',
-    context: fromRoot('src'),
+    context: fromRoot('src/client'),
 
     entry: ['./index.js'],
 
     output: {
-      filename: 'pack.js',
+      filename: 'bundle.js',
       path: fromRoot('public')
     },
 
@@ -60,9 +59,8 @@ module.exports = (() => {
 
       new HtmlPlugin({
         publicPath: '/',
-        template: fromRoot('src/index.html'),
-        alwaysWriteToDisk: false,
-        title: 'bytesized'
+        template: fromRoot('src/client//index.html'),
+        alwaysWriteToDisk: false
       }),
 
       new WriteFilePlugin({

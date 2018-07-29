@@ -9,7 +9,7 @@ import HtmlPlugin from 'html-webpack-plugin'
 
 import * as loaders from './loaders'
 
-const fromRoot = (_path) => path.resolve(__dirname, '../', _path)
+const fromRoot = (_path) => path.resolve(__dirname, '../../', _path)
 
 module.exports = (() => {
   return {
@@ -60,8 +60,7 @@ module.exports = (() => {
       new HtmlPlugin({
         publicPath: '/',
         template: fromRoot('src/index.html'),
-        alwaysWriteToDisk: false,
-        title: 'bytesized'
+        alwaysWriteToDisk: true
       })
     ]
   }

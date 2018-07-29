@@ -6,7 +6,7 @@ module.exports = {
   plugins: [
     autoprefixer({}),
     tramix({
-      include: './src/styles/mixins/index.js'
+      include: './src/client/styles/mixins/index.js'
     })
   ]
 }

@@ -3,7 +3,7 @@
 Starts webpack/webpack-serve in watch mode.
 
 ```bash
-babel-node node_modules/.bin/webpack-serve --config ./webpack/webpack.dev.js
+babel-node node_modules/.bin/webpack-serve --config ./webpack/client/webpack.dev.js
 ```
 
 ## build
@@ -11,7 +11,7 @@ babel-node node_modules/.bin/webpack-serve --config ./webpack/webpack.dev.js
 Builds the project for production.
 
 ```bash
-babel-node node_modules/.bin/webpack --config ./webpack/webpack.dev.js
+babel-node node_modules/.bin/webpack --config ./webpack/client/webpack.dev.js
 ```
 
 ## test
