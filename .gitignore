@@ -19,3 +19,7 @@ public/*/index.html
 *.css.json
 **/*/bundle.js
 **/dist
+
+public/bundle.js
+public/bundle.js.map
+public/index.html
