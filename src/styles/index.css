@@ -14,13 +14,16 @@
   --black: rgb(23, 23, 23);
 }
 
-html, body, body>div {
+html,
+body,
+#root {
   height: 100vh;
 }
 
 /* NOTE: These styles will be unnecessary when g2-ops-components provides all the components needed. */
 
-input, textarea {
+input,
+textarea {
   font-size: 16px !important;
 }
 
@@ -32,15 +35,18 @@ textarea {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }

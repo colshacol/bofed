@@ -2272,7 +2272,7 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.3, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-decamelize-keys@^1.0.0:
+decamelize-keys@^1.0.0, decamelize-keys@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/decamelize-keys/-/decamelize-keys-1.1.0.tgz#d171a87933252807eb3cb61dc1c1445d078df2d9"
   dependencies:
@@ -5750,6 +5750,12 @@ to-regex@^3.0.1, to-regex@^3.0.2:
 toposort@^1.0.0:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
+
+tramix@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tramix/-/tramix-2.0.1.tgz#e284bae2030f797d51a60dc70e87e82be62fb4ea"
+  dependencies:
+    decamelize-keys "^1.1.0"
 
 trim-newlines@^2.0.0:
   version "2.0.0"

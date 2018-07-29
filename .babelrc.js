@@ -45,7 +45,7 @@ module.exports = (api) => {
               generateScopedName: '[path]-[name]-[local]',
               handleMissingStyleName: 'warn',
               webpackHotModuleReloading: true,
-              context: '.${PWD}/src',
+              context: './src',
               exclude: 'node_modules'
             }
           ]
