@@ -1,6 +1,6 @@
 # bofed
 
-My front-end boilerplate buddy.
+My Webpack/React/Micro "full-stack" boilerplate buddy.
 
 ## Set Up
 
