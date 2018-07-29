@@ -1,27 +1,12 @@
 node_modules
-
 package-json.lock
 .DS_Store
-**/.env
-*.log
-
-.localStorage
 .vscode
-.storage
-
-**/*/dist/*.js
-
-**/bundle.js
-bundle.js.map
-public/*/index.html
-
-*.js.map
-*.css.json
-**/*/bundle.js
-**/dist
+*.log
+.env
 
 public/bundle.js
 public/bundle.js.map
 public/index.html
 
-server
+server/**
