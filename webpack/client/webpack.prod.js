@@ -15,7 +15,7 @@ module.exports = (() => {
   return {
     mode: 'production',
     devtool: 'source-map',
-    context: fromRoot('src'),
+    context: fromRoot('src/client'),
 
     entry: ['./index.js'],
 
@@ -59,7 +59,7 @@ module.exports = (() => {
 
       new HtmlPlugin({
         publicPath: '/',
-        template: fromRoot('src/index.html'),
+        template: fromRoot('src/client/index.html'),
         alwaysWriteToDisk: true
       })
     ]

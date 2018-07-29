@@ -10,6 +10,8 @@ yarn maid start-client & yarn maid start-server
 
 Starts the client in dev mode with HMR.
 
+Run task `clean-client` before this.
+
 ```bash
 babel-node node_modules/.bin/webpack-serve --config ./webpack/client/webpack.dev.js
 ```
@@ -20,6 +22,14 @@ Builds the client for production.
 
 ```bash
 babel-node node_modules/.bin/webpack --config ./webpack/client/webpack.prod.js
+```
+
+## clean-client
+
+Remove files produced by building client for production.
+
+```bash
+rm -f public/bundle.js public/bundle.js.map public/index.html
 ```
 
 # Server Scripts
@@ -56,13 +66,13 @@ micro ./server/services/foo --port 8001
 babel ./src/server --out-dir ./server
 ```
 
+# Helper Scripts
+
 ## test
 
 ```bash
 jest
 ```
-
-# Helper Scripts
 
 ## kill-ports
 

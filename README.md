@@ -21,4 +21,4 @@ Available scripts live and are documented inside `maidfile.md`. To run a script,
 
 ## TODO
 
-- Create `clean` script for Webpack output.
+_Nothing to show._
