@@ -1,3 +1,9 @@
+## start
+
+```bash
+yarn maid start-client & yarn maid start-server
+```
+
 # Client Scripts
 
 ## start-client
@@ -20,12 +26,12 @@ babel-node node_modules/.bin/webpack --config ./webpack/client/webpack.prod.js
 
 ## start-server
 
-Kills ports, builds the server(s), and starts the server(s).
+Kills ports, builds the server(s), and starts the server(s). (Watches file changes with nodemon.)
 
 Run tasks `build-server` `kill-ports` before this.
 
 ```bash
-yarn maid start-static-service & yarn maid start-foo-service & node server
+./node_modules/.bin/nodemon --watch src/server --exec yarn maid start-static-service & yarn maid start-foo-service & node server
 ```
 
 ## start-static-service
