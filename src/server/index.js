@@ -9,5 +9,5 @@ const proxy = createProxy([
 
 proxy.listen(8000, (err) => {
   if (err) throw err
-  boxlog(`${time_stamp()}> Ready @ http://localhost:8000`)
+  boxlog(`${time_stamp()}> Server Ready @ http://localhost:8000`)
 })

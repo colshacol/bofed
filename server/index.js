@@ -22,7 +22,7 @@ var proxy = (0, _microProxy.default)([{
 }]);
 proxy.listen(8000, function (err) {
   if (err) throw err;
-  boxlog("".concat(time_stamp(), "> Ready @ http://localhost:8000"));
+  boxlog("".concat(time_stamp(), "> Server Ready @ http://localhost:8000"));
 });
 ;
 
@@ -35,7 +35,7 @@ proxy.listen(8000, function (err) {
     return;
   }
 
-  reactHotLoader.register(proxy, "proxy", "/Users/cocolcleasure/Code/bofed/src/server/index.js");
+  reactHotLoader.register(proxy, "proxy", "/home/colshacol/Code/bofed/src/server/index.js");
   leaveModule(module);
 })();
 

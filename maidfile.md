@@ -41,7 +41,7 @@ Kills ports, builds the server(s), and starts the server(s). (Watches file chang
 Run tasks `build-server` `kill-ports` before this.
 
 ```bash
-./node_modules/.bin/nodemon --watch src/server --exec yarn maid start-static-service & yarn maid start-foo-service & node server
+./node_modules/.bin/nodemon --watch src/server --exec node server
 ```
 
 ## start-static-service
@@ -49,7 +49,7 @@ Run tasks `build-server` `kill-ports` before this.
 Starts the static file server for `./public`.
 
 ```bash
-serve -l 8999 ./public
+kill-port 8999 && serve -l 8999 ./public
 ```
 
 ## start-foo-service
@@ -77,5 +77,5 @@ jest
 ## kill-ports
 
 ```bash
-kill-port 8000 8001 8002 8003 8004 8005 8999 8000
+kill-port 8000 8001 8999
 ```

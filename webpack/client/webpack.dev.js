@@ -17,6 +17,8 @@ module.exports = (() => {
     devtool: 'source-map',
     context: fromRoot('src/client'),
 
+    stats: 'errors-only',
+
     entry: ['./index.js'],
 
     output: {
